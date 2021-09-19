@@ -1,13 +1,5 @@
-
-.container {
-  position: relative;
-  width: 50%;
-}
-
-/* Make the image responsive */
-.container img {
-  width: 100%;
-  height: auto;
+img {
+width: 200px; height: 300px;  object-fit: fill
 }
 
 .btn1 {
