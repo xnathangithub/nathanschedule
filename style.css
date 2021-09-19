@@ -2,9 +2,10 @@ body {
   background-image: url('videos/gif2.gif');
   background-size: auto;
   background-repeat: no-repeat;
-    background-attachment: fixed;
-  height:100%;
-  width:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .btn1 {
