@@ -13,7 +13,8 @@ img {
   top: 75px;
   padding:0;
   margin:0;
-
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
   font-size: auto;
@@ -28,7 +29,8 @@ img {
     top: 130px;
     padding:0;
     margin:0;
-
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
@@ -43,7 +45,8 @@ img {
     top: 185px;
     padding:0;
     margin:0;
-
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
@@ -59,7 +62,8 @@ img {
     top: 240px;
     padding:0;
     margin:0;
-  
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
@@ -75,7 +79,8 @@ img {
     top: 295px;
     padding:0;
     margin:0;
-
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
@@ -91,7 +96,8 @@ img {
     top: 350px;
     padding:0;
     margin:0;
-
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
@@ -107,7 +113,8 @@ img {
     top: 405px;
     padding:0;
     margin:0;
-
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
@@ -123,7 +130,8 @@ img {
     top: 460px;
     padding:0;
     margin:0;
-  
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #555;
     color: white;
     font-size: auto;
