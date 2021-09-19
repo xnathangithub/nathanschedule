@@ -1,5 +1,5 @@
 body {
-  background-image: url('videos/gif1.gif');
+  background-image: url('videos/gif2.gif');
   background-size:100%;
   background-repeat: repeat-y;
   background-attachment: fixed;
@@ -7,7 +7,7 @@ body {
   width:100%;
 }
 
-/* .btn1 {
+.btn1 {
   position: absolute;
   left: 50%;
   top: 75px;
@@ -141,4 +141,3 @@ body {
     border-radius: 5px;
 }
 
-*/
