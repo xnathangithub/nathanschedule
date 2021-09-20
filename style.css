@@ -198,8 +198,10 @@ a.button1{
   color:#FFFFFF;
   text-align:center;
   transition: all 0.2s;
-  top:95%;
+  left: 46.5%;
+    top: 1%;
   }
+
   a.button1:hover{
   color:#000000;
   background-color: rgb(255, 255, 255);
