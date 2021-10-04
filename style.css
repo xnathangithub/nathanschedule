@@ -1,3 +1,182 @@
+
+/* GLOBAL STYLES */
+body {
+  background: rgb(170, 169, 169);
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  position: static;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid blue; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 4, 255) }
+}
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {			
+position: absolute;
+  margin: 5% auto;
+  width: 100px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+}
+
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+
+
+
+ /* 
 body {
   background-image: url('videos/gif2.gif');
   background-size:cover ;
@@ -6,205 +185,4 @@ body {
   height:100%;
   width:100%;
 }
-
-.btn1 {
-  position: absolute;
-  left: 50%;
-  top: 75px;
-  padding:0;
-  margin:0;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(65, 77, 83);
-  color: white;
-  font-size: auto;
-  padding: 12px 24px;
-  border: 0.2em solid rgb(27, 140, 206);
-   transition: all 0.2s;
-  cursor: pointer;
-  border-radius: 5px;
-  opacity: 65%;
-}
-.btn1:hover{
-  border-color: rgba(255,255,255,1);
-
-}
-.btn2 {
-  position: absolute;
-    left: 50%;
-    top: 130px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-.btn2:hover{
-  border-color: rgba(255,255,255,1);
-}
-.btn3 {
-  position: absolute;
-    left: 50%;
-    top: 185px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-.btn3:hover{
-  border-color: rgba(255,255,255,1);
-}
-.btn4 {
-  position: absolute;
-    left: 50%;
-    top: 240px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-.btn4:hover{
-  border-color: rgba(255,255,255,1);
-}
-.btn5 {
-  position: absolute;
-    left: 50%;
-    top: 295px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-.btn5:hover{
-  border-color: rgba(255,255,255,1);
-}
-.btn6 {
-  position: absolute;
-    left: 50%;
-    top: 350px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;  
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-.btn6:hover{
-  border-color: rgba(255,255,255,1);
-}
-.btn7 {
-  position: absolute;
-    left: 50%;
-    top: 405px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-.btn7:hover{
-  border-color: rgba(255,255,255,1);
-}
-.btn8 {
-  position: absolute;
-    left: 50%;
-    top: 460px;
-    padding:0;
-    margin:0;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: rgb(65, 77, 83);
-    color: white;
-    font-size: auto;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    opacity: 65%;
-    border: 0.2em solid rgb(27, 140, 206);
-    transition: all 0.2s;
-}
-
-.btn8:hover{
-  border-color: rgba(255,255,255,1);
-}
-
-
-a.button1{
-  position: absolute;
-  display:inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  color:#FFFFFF;
-  text-align:center;
-  transition: all 0.2s;
-  left: 50%;
-   top: 0%;
-   background-color: rgba(184, 194, 199, 0.575);
-
-  }
-
-  a.button1:hover{
-  color:#000000;
-  background-color: rgb(255, 255, 255);
-  }
+*/
