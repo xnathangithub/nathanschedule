@@ -37,7 +37,6 @@ span::after {
 .slide {
   clear:both;
   height:0px;
-  overflow: hidden;
   text-align: center;
   transition: height .4s ease;
 }
