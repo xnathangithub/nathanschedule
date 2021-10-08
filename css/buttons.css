@@ -39,6 +39,8 @@ span::after {
   height:0px;
   text-align: center;
   transition: height .4s ease;
+    overflow: auto;
+
 }
 
 .slide li {padding : 30px;}
