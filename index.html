@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-
+<!--
+Template Name: Yammoe
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
 <html lang="">
-
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
   <title>Nathans Schedule</title> 
   <link rel="icon" href="images/n.png">
@@ -9,35 +16,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
-<body>
 
-  <p>Click the button to demonstrate the prompt box.</p>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 
-  <button onclick="myFunction()">Start Calculations</button>
-  
-  <p id="demo"></p>
-  
-  <script>
-  
-  function myFunction() {
-
- var P = prompt("\n Please enter the power rating (in watts)");
-
-var r = prompt("Please enter the distance from the sound source (in meters)");
-
-r2 = r*r
-
-pi = r2*3.14
-
-b = pi*4
-
-total = P/b
-
-document.getElementById("demo").innerHTML =
-      "The answer to the equation is " + total;
-  }
-
-
-  </script>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
 </body>
 </html>
